@@ -2,6 +2,9 @@
 
 Exploration and demo of a multipage dash app.
 
+[Original Source](https://dash-bootstrap-components.opensource.faculty.ai/examples/simple-sidebar/)
+
+
 ### Environment Setup
 
 Bash:
@@ -17,6 +20,7 @@ python -m venv .venv
 source .\.venv\scripts\activate
 pip install -r requirements.txt
 ```
+
 
 ### Run Multipage App
 
