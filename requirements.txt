@@ -1,2 +1,2 @@
-dash
+dash==2.0.0
 dash_bootstrap_components

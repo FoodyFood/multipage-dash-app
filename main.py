@@ -4,6 +4,13 @@ from dash import Input, Output, dcc, html
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+# app.config.update({
+#     # remove the default of '/'
+#     'routes_pathname_prefix': '',
+#     # remove the default of '/'
+#     'requests_pathname_prefix': '8050/' # The / after 8050 is required
+# })
+
 # the style arguments for the sidebar. We use position:fixed and a fixed width
 SIDEBAR_STYLE = {
     "position": "fixed",
