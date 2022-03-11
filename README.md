@@ -5,6 +5,9 @@ Exploration and demo of a multipage dash app.
 [Original Source](https://dash-bootstrap-components.opensource.faculty.ai/examples/simple-sidebar/)
 
 
+![BAsic App Runnung In Browser](./docs/basic-app-running.jpg)
+
+
 ### Environment Setup
 
 Bash:
