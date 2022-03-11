@@ -20,3 +20,7 @@ pip install -r requirements.txt
 
 ### Run Multipage App
 
+```
+make run
+```
+
