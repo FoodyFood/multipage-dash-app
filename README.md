@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 Set these for viewing externally:
 ```python
-username='user@example.com'
+username='email@example.com'
 url_prefix= f"/user/{username}/proxy/{port}/"
 ```
 
@@ -53,5 +53,5 @@ With the url_prefix set to the string used for external viewing, you can view th
 https://example.com/user/{username}/proxy/{port}/
 
 Example using the values in main:
-https://example.com/user/user@example.com/proxy/8050/
+https://example.com/user/email@example.com/proxy/8050/
 

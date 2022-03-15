@@ -5,7 +5,7 @@ from dash import Input, Output, dcc, html
 
 # Figure out the requests prefix at start to make life easier
 port=8050
-username='user@example.com'
+username='email@example.com'
 url_prefix= "/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
 
 
