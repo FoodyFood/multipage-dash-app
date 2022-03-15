@@ -5,8 +5,8 @@ from dash import Input, Output, dcc, html
 
 # Figure out the requests prefix at start to make life easier
 port=8050
-username='doconnor@numerix.com'
-url_prefix= f"/user/{username}/proxy/{port}/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
+username='user@example.com'
+url_prefix= "/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
 
 
 # Start the dahs with the prefix instead of in the app.config.update
