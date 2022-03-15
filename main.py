@@ -5,8 +5,8 @@ from dash import Input, Output, dcc, html
 
 # Figure out the requests prefix at start to make life easier
 port=8050
-username='user@example.com'
-url_prefix= "/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
+username='doconnor@numerix.com'
+url_prefix= f"/user/{username}/proxy/{port}/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
 
 
 # Start the dahs with the prefix instead of in the app.config.update
@@ -52,15 +52,15 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 def render_page_content(pathname):
     print(f"Pathname: {pathname}") # I found this really helped me debug
     if pathname == f"{url_prefix}":
-        return html.P(f"This is the content of: {pathname} Case: home")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: home")
     elif pathname == f"{url_prefix}page1":
-        return html.P(f"This is the content of: {pathname} Case: page1")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: page1")
     elif pathname == f"{url_prefix}page2":
-        return html.P(f"This is the content of: {pathname} Case: page2")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: page2")
     elif pathname == f"{url_prefix}code":
         f = open('./main.py', 'r')
         return html.Pre(f.read())
-    return html.P(f"404 Pathname: {pathname} not found")
+    return html.P(f"404: Path was not recognized: {pathname} not found")
 
 
 if __name__ == "__main__":
