@@ -52,11 +52,11 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 def render_dash_content(pathname):
     print(f"Pathname: {pathname}") # I found this really helped me debug
     if pathname == f"{url_prefix}":
-        return html.P(f"SUCCESS: This is the content of: {pathname} Case: home")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: home") # Replace this with your homepage dashboard
     elif pathname == f"{url_prefix}dash1":
-        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash1")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash1") # Replace this with your first dashboard
     elif pathname == f"{url_prefix}dash2":
-        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash2")
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash2") # Replace this with your second dashboard
     elif pathname == f"{url_prefix}code":
         f = open('./main.py', 'r')
         return html.Pre(f.read())
