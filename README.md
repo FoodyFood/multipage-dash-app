@@ -1,8 +1,8 @@
-# Multipage Dash App in JupyterHub
+# Multipage Dash App
 
-Multipage dash app that is compatable with JupyterHub.
+A Multipage dash app that is compatable with Jupyter Proxy.
 
-This multipage dash app will run inside JupyterHub and allow browsing externally by leveraging jupyter proxy.
+This multipage dash app will run inside JupyterHub and allow external viewing by leveraging Jupyter Proxy.
 
 ![BAsic App Runnung In Browser](./docs/basic-app-running.jpg)
 
@@ -26,9 +26,9 @@ pip install -r requirements.txt
 
 ### Configuration
 
-Set these for external browsing outside JupyterHub:
+Set these for viewing externally:
 ```python
-username='user@example.com'
+username='email@example.com'
 url_prefix= f"/user/{username}/proxy/{port}/"
 ```
 
@@ -37,10 +37,10 @@ Or to view locally set it to:
 url_prefix= "/"
 ```
 
-This leaves us where the whole internal/external viewing is determined by `url_prefix` which is handy.
+This leaves us where the whole local/external viewing is determined by `url_prefix` which is handy.
 
 
-### Run Multipage App
+### Run Dash App
 
 ```bash
 make run # Assumes you have activated the venv and installed as above
@@ -48,10 +48,9 @@ make run # Assumes you have activated the venv and installed as above
 
 ### View Externally
 
-With the url_prefix set to the string used for external browsing, you can view the dash here:
+With the url_prefix set to the string used for external viewing, you can view the dash here:
 
 https://example.com/user/{username}/proxy/{port}/
 
 Example using the values in main:
-https://example.com/user/user@example.com/proxy/8050/
-
+https://example.com/user/email@example.com/proxy/8050/
