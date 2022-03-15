@@ -58,7 +58,7 @@ def render_page_content(pathname):
     elif pathname == f"{url_prefix}page2":
         return html.P(f"This is the content of: {pathname} Case: page2")
     elif pathname == f"{url_prefix}code":
-        f = open('./main2.py', 'r')
+        f = open('./main.py', 'r')
         return html.Pre(f.read())
     return html.P(f"404 Pathname: {pathname} not found")
 
