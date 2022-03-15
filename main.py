@@ -34,29 +34,29 @@ sidebar = html.Div(
         html.H2("Menu", className="display-4"),
         html.Hr(),
         dbc.Nav(dbc.NavLink("Home", href=f"{url_prefix}")),
-        dbc.Nav(dbc.NavLink("Page 1", href=f"{url_prefix}page1")),
-        dbc.Nav(dbc.NavLink("Page 2", href=f"{url_prefix}page2")),
+        dbc.Nav(dbc.NavLink("Dash 1", href=f"{url_prefix}dash1")),
+        dbc.Nav(dbc.NavLink("Dash 2", href=f"{url_prefix}dash2")),
         dbc.Nav(dbc.NavLink("The Live Code", href=f"{url_prefix}code")),
     ],
     style=SIDEBAR_STYLE,
 )
 
 
-content = html.Div(id="page-content", style=CONTENT_STYLE)
+content = html.Div(id="dash-content", style=CONTENT_STYLE)
 
 
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 
 
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def render_page_content(pathname):
+@app.callback(Output("dash-content", "children"), [Input("url", "pathname")])
+def render_dash_content(pathname):
     print(f"Pathname: {pathname}") # I found this really helped me debug
     if pathname == f"{url_prefix}":
         return html.P(f"SUCCESS: This is the content of: {pathname} Case: home")
-    elif pathname == f"{url_prefix}page1":
-        return html.P(f"SUCCESS: This is the content of: {pathname} Case: page1")
-    elif pathname == f"{url_prefix}page2":
-        return html.P(f"SUCCESS: This is the content of: {pathname} Case: page2")
+    elif pathname == f"{url_prefix}dash1":
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash1")
+    elif pathname == f"{url_prefix}dash2":
+        return html.P(f"SUCCESS: This is the content of: {pathname} Case: dash2")
     elif pathname == f"{url_prefix}code":
         f = open('./main.py', 'r')
         return html.Pre(f.read())
