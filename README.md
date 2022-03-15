@@ -40,13 +40,13 @@ url_prefix= "/"
 This leaves us where the whole local/external viewing is determined by `url_prefix` which is handy.
 
 
-### Run Multipage App
+### Run Dash App
 
 ```bash
 make run
 ```
 
-### View Externally
+### View Dash App Externally
 
 With the url_prefix set to the string used for external viewing, you can view the dash here:
 
