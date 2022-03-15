@@ -46,7 +46,7 @@ This leaves us where the whole local/external viewing is determined by `url_pref
 make run
 ```
 
-### View Dash App Externally
+### View Externally
 
 With the url_prefix set to the string used for external viewing, you can view the dash here:
 
