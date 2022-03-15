@@ -11,12 +11,11 @@ This multipage dash app will run inside JupyterHub and allow external viewing by
 
 This example comes with placeholder text instead of 3 actual dashboards.
 
-_The dashboards are not the purpose of this, this is just a framework demonstrating how to host multiple dashboards with a menu to select between them._
-
 To attach your dashboards you can put them here:
 
 ![attach-dashboard](docs/where-to-attach-dashboard.jpg)
 
+_The dashboards are not the purpose of this repo, this is just a framework demonstrating how to host multiple dashboards with a menu to select between them._
 
 ### Environment Setup
 
