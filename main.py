@@ -18,7 +18,7 @@ SIDEBAR_STYLE = {
     "top": 0,
     "left": 0,
     "bottom": 0,
-    "width": "16rem",
+    "width": "10rem",
     "padding": "2rem 1rem",
     "background-color": "#f8f9fa",
 }
@@ -31,7 +31,7 @@ CONTENT_STYLE = {
 
 sidebar = html.Div(
     [
-        html.H2("Sidebar", className="display-4"),
+        html.H2("Menu", className="display-4"),
         html.Hr(),
         dbc.Nav(dbc.NavLink("Home", href=f"{url_prefix}")),
         dbc.Nav(dbc.NavLink("Page 1", href=f"{url_prefix}page1")),
