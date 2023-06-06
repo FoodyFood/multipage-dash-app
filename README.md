@@ -53,7 +53,8 @@ This leaves us where the whole local/external viewing is determined by `url_pref
 ### Run Dash App
 
 ```bash
-make run # Assumes you have activated the venv and installed as above
+make run-windows # Assumes you have activated the venv and installed as above
+make run-linux   # If you are running in a Linux environment
 ```
 
 ### View Externally
