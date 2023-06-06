@@ -3,10 +3,21 @@ import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
 
 
-# Figure out the requests prefix at start to make life easier
+# Determine url path, and if running locally or if running in a JupyterHub workspace
 port=8050
-username='email@example.com'
-url_prefix= "/" # Set to f"/user/{username}/proxy/{port}/" to run in JupyterHub/CodeKitchen/NxCore
+username: str
+url_prefix: str
+if 'JUPYTERHUB_USER' in os.environ:
+    username = os.environ['JUPYTERHUB_USER']
+    url_prefix= f"/user/{username}/proxy/{port}/"
+else:
+    url_prefix = "/"
+
+proxy_url: str
+if 'VSCODE_PROXY_URI' in os.environ:
+    proxy_url = os.environ['VSCODE_PROXY_URI']
+else:
+    proxy_url = f'127.0.0.1:{port}/'
 
 
 # Start the dahs with the prefix instead of in the app.config.update
@@ -64,4 +75,5 @@ def render_dash_content(pathname):
 
 
 if __name__ == "__main__":
+    print(f'\nClick here to view the dashboard: \n{proxy_url[:-8]}{port}\n\n')
     app.run_server(debug=True, port=port)
