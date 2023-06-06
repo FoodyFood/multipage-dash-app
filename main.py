@@ -76,5 +76,5 @@ def render_dash_content(pathname):
 
 
 if __name__ == "__main__":
-    print(f'\nClick here to view the dashboard: \n{proxy_url[:-8]}{port}\n\n')
+    print(f'\nClick here to view the dashboard: \n{proxy_url[:-8]}{port}/\n\n')
     app.run_server(debug=True, port=port)
